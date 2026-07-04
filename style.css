@@ -1,0 +1,421 @@
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e8,#ffeaf5,#f4ecff);
+    color:#555;
+    overflow-x:hidden;
+}
+
+/* =====================================
+   BACKGROUND
+===================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.6),transparent 30%),
+    radial-gradient(circle at 80% 15%,rgba(255,255,255,.5),transparent 30%),
+    radial-gradient(circle at 50% 85%,rgba(255,255,255,.45),transparent 30%);
+    z-index:-2;
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* =====================================
+   OPENING
+===================================== */
+
+#opening{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.card{
+
+    width:420px;
+
+    max-width:95%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(255,105,180,.18);
+
+}
+
+.small-title{
+
+    color:#ff6aa5;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.card h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:48px;
+
+    color:#ff4f8d;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.gift{
+
+    margin:35px 0;
+
+}
+
+.gift img{
+
+    width:170px;
+
+    transition:.3s;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+.gift img:hover{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+
+}
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:#ff5f9f;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(255,95,159,.3);
+
+}
+
+button:hover{
+
+    background:#ff3e88;
+
+    transform:translateY(-4px);
+
+}
+
+/* =====================================
+   MAIN
+===================================== */
+
+#mainContent{
+
+    display:none;
+
+    width:100%;
+
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:80px 20px 40px;
+
+    text-align:center;
+
+}
+
+.avatar{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:0 15px 35px rgba(255,105,180,.2);
+
+    margin-bottom:30px;
+
+}
+
+.hero h2{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:45px;
+
+    color:#ff4d8d;
+
+    margin-bottom:30px;
+
+}
+
+.hero span{
+
+    color:#ff78ac;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    line-height:1.9;
+
+    font-size:19px;
+
+    box-shadow:0 10px 30px rgba(255,105,180,.15);
+
+}
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery-section{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+.gallery-section h3{
+
+    color:#ff4d8d;
+
+    font-size:32px;
+
+    margin-bottom:35px;
+
+}
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* =====================================
+   LETTER
+===================================== */
+
+.letter-section{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:70px 20px 100px;
+
+}
+
+.letter-card{
+
+    text-align:center;
+
+}
+
+.letter-card img{
+
+    width:150px;
+
+    margin-bottom:25px;
+
+}
+
+#letterContent{
+
+    display:none;
+
+    margin-top:35px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    box-shadow:0 10px 30px rgba(255,105,180,.15);
+
+}
+
+#letterContent h3{
+
+    color:#ff4d8d;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:768px){
+
+.card{
+
+padding:35px 25px;
+
+}
+
+.card h1{
+
+font-size:38px;
+
+}
+
+.avatar{
+
+width:140px;
+height:140px;
+
+}
+
+.hero h2{
+
+font-size:35px;
+
+}
+
+.hero p{
+
+padding:25px;
+
+font-size:17px;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
